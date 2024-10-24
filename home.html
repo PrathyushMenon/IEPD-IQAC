@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ERP Data Collection Form</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="form-container">
+        <h1>Center for Innovation and Entrepreneurship</h1>
+        <p class="form-message">Please fill out the form below to help us gather data for our ERP system. Your input is valuable and appreciated. Thank you!</p>
+        
+        <form action="YOUR_BACKEND_ENDPOINT" method="post" enctype="multipart/form-data">
+            <!-- Personal Information Section -->
+            <div class="form-row">
+                <div class="form-column">
+                    <label for="first-name">First Name:</label>
+                    <input type="text" id="first-name" name="first_name" required>
+                </div>
+                <div class="form-column">
+                    <label for="last-name">Last Name:</label>
+                    <input type="text" id="last-name" name="last_name" required>
+                </div>
+            </div>
+
+            <!-- Contact Information Section -->
+            <div class="form-row">
+                <div class="form-column">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-column">
+                    <label for="phone">Phone Number:</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+            </div>
+
+            <!-- Data Collection Section -->
+            <div class="form-row">
+                <div class="form-column">
+                    <label for="department">Department:</label>
+                    <input type="text" id="department" name="department" required>
+                </div>
+                <div class="form-column">
+                    <label for="position">Position:</label>
+                    <input type="text" id="position" name="position" required>
+                </div>
+            </div>
+
+            <!-- Document Upload Section -->
+            <div class="form-row">
+                <div class="form-column">
+                    <label for="file">Attach supporting documents:</label>
+                    <input type="file" id="file" name="file" multiple required>
+                </div>
+            </div>
+
+            <!-- Additional Information Section -->
+            <div class="form-row">
+                <div class="form-column">
+                    <label for="references">List your references:</label>
+                    <textarea id="references" name="references" rows="4" placeholder="List your references here..." required></textarea>
+                </div>
+            </div>
+
+            <!-- Submit Button -->
+            <div class="submit-section">
+                <button type="submit">Submit</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
