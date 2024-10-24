@@ -1,0 +1,129 @@
+/* General Body Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to right, #f4f4f4, #e9ecef); /* Gradient background */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Full height */
+}
+
+/* Container Styles */
+.container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 30px;
+    background: white;
+    border-radius: 10px; /* Slightly increased border radius */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15); /* Deeper shadow for more depth */
+    transition: box-shadow 0.3s, transform 0.3s; /* Transition for hover effect */
+    animation: slideIn 0.5s ease-out; /* Animation on load */
+}
+
+/* Hover Effect on Container */
+.container:hover {
+    box-shadow: 0 6px 30px rgba(0, 0, 0, 0.25); /* Shadow on hover */
+    transform: translateY(-5px); /* Slight lift on hover */
+}
+
+/* Header Styles */
+h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+    font-size: 2.5em; /* Increased font size */
+    font-weight: bold; /* Bold header */
+}
+
+/* Form Styles */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Input Styles */
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px; /* Increased font size for inputs */
+    transition: border-color 0.3s, box-shadow 0.3s; /* Transition for focus effect */
+}
+
+/* Focus Effect on Inputs */
+input:focus,
+textarea:focus {
+    border-color: #28a745; /* Change border color on focus */
+    outline: none; /* Remove default outline */
+    box-shadow: 0 0 5px rgba(40, 167, 69, 0.5); /* Add glow effect */
+}
+
+/* Button Styles */
+button {
+    padding: 12px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px; /* Increased font size for button */
+    transition: background-color 0.3s, transform 0.3s; /* Transition for hover effect */
+}
+
+/* Hover Effect on Button */
+button:hover {
+    background-color: #218838;
+    transform: scale(1.05); /* Slightly grow on hover */
+}
+
+/* Results Section Styles */
+#results {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 15px;
+}
+
+/* Individual Result Item Styles */
+.result-item {
+    background: #f9f9f9;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    transition: background-color 0.3s, transform 0.3s; /* Transition for hover effect */
+    animation: fadeIn 0.5s ease-in; /* Animation for individual result items */
+}
+
+/* Hover Effect on Result Item */
+.result-item:hover {
+    background-color: #e9ecef; /* Lighten background on hover */
+    transform: translateY(-3px); /* Slight lift on hover */
+}
+
+/* Animations */
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
