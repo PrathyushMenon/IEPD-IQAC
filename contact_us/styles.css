@@ -1,0 +1,90 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: white;
+    padding: 10px 20px;
+    box-shadow: 0 4px 2px -2px gray;
+}
+
+.navbar {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+}
+
+.navbar li {
+    margin-right: 20px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+.about-section {
+    padding: 50px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.about-section h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.about-section p {
+    font-size: 18px;
+    color: #555;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.investment-opportunities, .smart-solutions {
+    display: flex;
+    padding: 50px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.investment-opportunities .text-box, .smart-solutions .text-box {
+    max-width: 50%;
+}
+
+.investment-opportunities img, .smart-solutions img {
+    max-width: 40%;
+    border-radius: 10px;
+}
+
+.statistics {
+    display: flex;
+    justify-content: center;
+    padding: 30px;
+    background-color: #f4f4f4;
+}
+
+.stat-item {
+    text-align: center;
+    margin: 0 20px;
+}
+
+.stat-item h3 {
+    font-size: 32px;
+    color: black;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+footer p {
+    margin: 5px;
+}
