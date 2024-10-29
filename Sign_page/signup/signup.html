@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup - Center for Innovation and Entrepreneurship</title>
+    <link rel="stylesheet" href="/Sign_page/signup/styles.css">
+    <link rel="stylesheet" href="/navbar.css"> 
+
+    <script>
+        function toggleTeacherID() {
+            const userType = document.getElementById("user-type").value;
+            const teacherIDField = document.getElementById("teacher-id-field");
+            if (userType === "Teacher") {
+                teacherIDField.style.display = "block";
+            } else {
+                teacherIDField.style.display = "none";
+            }
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul class="navbar">
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/Sign_page/login/login.html">Login</a></li>
+                <li><a href="/Sign_page/signup/signup.html">Signup</a></li>
+                <li><a href="/contact_us/contact_us.html">Contact Us</a></li>
+                <li><a href="/details/Student/display.html">View Details Page</a></li>
+                <li><a href="/details//Teacher/contact.html">Upload Page</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="signup-container">
+        <div class="signup-box">
+            <h1>Sign Up</h1>
+            <p class="signup-message">Create your account by filling in the information below.</p>
+
+            <form action="YOUR_BACKEND_ENDPOINT" method="post">
+                <!-- Name Fields -->
+                <div class="form-row">
+                    <div class="form-column">
+                        <label for="first-name">First Name:</label>
+                        <input type="text" id="first-name" name="first_name" required>
+                    </div>
+                    <div class="form-column">
+                        <label for="last-name">Last Name:</label>
+                        <input type="text" id="last-name" name="last_name" required>
+                    </div>
+                </div>
+
+                <!-- Email and Password -->
+                <div class="form-row">
+                    <div class="form-column">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-column">
+                        <label for="password">Password:</label>
+                        <input type="password" id="password" name="password" required>
+                    </div>
+                </div>
+
+                <!-- User Type Dropdown -->
+                <div class="form-row">
+                    <div class="form-column">
+                        <label for="user-type">I am a:</label>
+                        <select id="user-type" name="user_type" onchange="toggleTeacherID()" required>
+                            <option value="Student">Student</option>
+                            <option value="Teacher">Teacher</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Teacher ID (Hidden initially) -->
+                <div class="form-row" id="teacher-id-field" style="display: none;">
+                    <div class="form-column">
+                        <label for="teacher-id">Teacher ID:</label>
+                        <input type="text" id="teacher-id" name="teacher_id">
+                    </div>
+                </div>
+
+                <!-- Submit Button -->
+                <div class="submit-section">
+                    <button type="submit">Sign Up</button>
+                </div>
+            </form>
+
+            <p class="signup-message">Already have an account? <a href="login.html">Login here</a></p>
+        </div>
+    </div>
+</body>
+</html>

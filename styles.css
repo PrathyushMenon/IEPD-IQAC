@@ -1,293 +1,130 @@
-/* General Styling */
-body {
-    font-family: 'Arial', sans-serif;
+/* styles.css */
+
+/* Reset some default browser styles */
+body, h1, h2, h3, p {
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
-    color: #333;
 }
 
-/* Navigation Bar */
-.navbar ul {
+/* Body styles */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4; /* Light gray background */
+}
+
+/* Header styles */
+header {
+    background: #003366; /* Dark blue */
+    color: #ffffff;
+    padding: 1rem 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.navbar {
     list-style: none;
-    padding: 0;
-    margin: 0;
     display: flex;
-    justify-content: space-around;
-    background-color: white;
-    position: fixed; /* Make it sticky */
-    top: 0;
-    width: 100%;
-    box-shadow: 0 4px 2px -2px gray;
-    z-index: 1000; /* Make sure it stays on top */
+    justify-content: center;
 }
 
 .navbar li {
-    display: inline;
+    margin: 0 20px;
 }
 
 .navbar a {
+    color: #ffffff;
     text-decoration: none;
-    color: #333;
     font-weight: bold;
+    position: relative;
 }
 
-.navbar a:hover {
-    color: #007bff;
+.navbar a::after {
+    content: '';
+    display: block;
+    height: 2px;
+    width: 0;
+    background: #FFD700; /* Yellow */
+    transition: width 0.3s;
 }
 
-body {
-    padding-top: 70px; /* Adjust to avoid content hidden behind navbar */
+.navbar a:hover::after {
+    width: 100%;
 }
 
-/* Hero Section */
+/* Hero section styles */
 .hero {
-    padding: 50px;
+    background: linear-gradient(to bottom right, #007acc, #FFD700); /* Gradient background */
+    color: #ffffff;
     text-align: center;
-    background-color: #f9f9f9;
+    padding: 80px 20px;
 }
 
 .hero h1 {
-    font-size: 36px;
-    margin-bottom: 20px;
+    font-size: 3rem;
+    margin-bottom: 10px;
 }
 
 .hero p {
-    font-size: 18px;
-    max-width: 800px;
-    margin: 0 auto;
-    color: #555;
+    font-size: 1.3rem;
 }
 
-/* Discover Section */
-.discover {
-    display: flex;
-    justify-content: space-between;
-    padding: 50px;
-    background-color: #fff;
-    align-items: center;
-}
-
-.discover .content {
-    max-width: 50%;
-}
-
-.discover h2 {
-    font-size: 28px;
-}
-
-.discover p {
-    color: #555;
-}
-
-.discover .image-box img {
-    max-width: 40%;
-    border-radius: 10px;
-}
-
-/* Solutions Section */
-.solutions {
-    padding: 50px;
-    background-color: #f9f9f9;
+/* Mission section styles */
+.mission, .achievements, .get-involved {
+    background: #ffffff; /* White background */
     text-align: center;
+    padding: 60px 20px;
+    margin: 20px 0;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-.solutions h2 {
-    font-size: 28px;
+.mission h2, .achievements h2, .get-involved h2 {
+    font-size: 2.5rem;
+    color: #003366;
+    margin-bottom: 15px;
 }
 
-.solutions p {
-    max-width: 800px;
-    margin: 0 auto;
-    color: #555;
+.mission p, .achievements p, .get-involved p {
+    font-size: 1.2rem;
 }
 
-.solutions img {
-    width: 100%;
-    max-width: 600px;
+/* Image box styles */
+.image-box {
     margin-top: 20px;
+}
+
+.image-box img {
+    max-width: 100%;
+    height: auto;
     border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-/* Statistics Section */
-.statistics {
-    display: flex;
-    justify-content: space-around;
-    padding: 50px;
-    background-color: #fff;
+/* Button styles */
+.button {
+    display: inline-block;
+    background: #FFD700; /* Yellow button */
+    color: #003366; /* Dark blue text */
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background 0.3s, transform 0.3s;
 }
 
-.stat {
-    text-align: center;
+.button:hover {
+    background: #FFC107; /* Slightly darker yellow */
+    transform: scale(1.05); /* Scale effect on hover */
 }
 
-.stat h3 {
-    font-size: 32px;
-    color: #007bff;
-}
-
-/* Footer */
+/* Footer styles */
 footer {
-    background-color: #333;
-    color: white;
-    padding: 30px;
+    background: #003366; /* Dark blue background */
+    color: #ffffff;
     text-align: center;
+    padding: 30px 0;
 }
 
 .footer-content p {
     margin: 5px 0;
-}
-
-/* Animation */
-.animate {
-    opacity: 0;
-    transform: translateY(20px);
-    transition: all 0.6s ease-out;
-}
-
-.animate.visible {
-    opacity: 1;
-    transform: translateY(0);
-}
-/* Global styles */
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #f1f3f5;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-}
-
-/* Container for login form */
-.login-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(135deg, #007bff 0%, #4e73df 100%);
-}
-
-/* Login box styles */
-.login-box {
-    background-color: #ffffff;
-    border-radius: 10px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-    padding: 50px;
-    max-width: 400px;
-    width: 100%;
-    text-align: center;
-}
-
-/* Heading */
-.login-box h1 {
-    font-size: 2.5em;
-    margin-bottom: 20px;
-    color: #343a40;
-}
-
-/* Message */
-.login-message {
-    font-size: 1.1em;
-    color: #6c757d;
-    margin-bottom: 30px;
-}
-
-/* Form row layout */
-.form-row {
-    margin-bottom: 20px;
-}
-
-/* Form columns */
-.form-column {
-    text-align: left;
-}
-
-/* Form labels */
-label {
-    display: block;
-    font-size: 1em;
-    color: #495057;
-    margin-bottom: 5px;
-}
-
-/* Form inputs */
-input[type="text"], input[type="email"], input[type="password"] {
-    width: 100%;
-    padding: 12px;
-    font-size: 1em;
-    border-radius: 5px;
-    border: 1px solid #ced4da;
-    background-color: #f8f9fa;
-    transition: border-color 0.3s ease;
-}
-
-input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focus {
-    border-color: #007bff;
-    background-color: #ffffff;
-    outline: none;
-}
-
-/* Checkbox */
-input[type="checkbox"] {
-    margin-right: 5px;
-}
-
-/* Remember me label */
-.remember-me {
-    display: flex;
-    align-items: center;
-}
-
-/* Submit button styling */
-.submit-section {
-    text-align: center;
-}
-
-.submit-section button {
-    background-color: #007bff;
-    border: none;
-    padding: 12px 30px;
-    font-size: 1.2em;
-    border-radius: 5px;
-    color: white;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.submit-section button:hover {
-    background-color: #0056b3;
-}
-
-/* Forgot password link */
-.forgot-password {
-    margin-top: 15px;
-}
-
-.forgot-password a {
-    color: #007bff;
-    text-decoration: none;
-}
-
-.forgot-password a:hover {
-    text-decoration: underline;
-}
-
-/* Responsive adjustments */
-@media (max-width: 768px) {
-    .login-box {
-        padding: 30px;
-    }
-    
-    .login-box h1 {
-        font-size: 2em;
-    }
-
-    .submit-section button {
-        font-size: 1em;
-        padding: 10px 20px;
-    }
 }
